@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>firefly</title><meta name="author" content="weihx"><meta name="copyright" content="weihx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="firefly">
+<meta property="og:url" content="http://firefly.rainyun.ink/">
+<meta property="og:site_name" content="firefly">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://firefly.rainyun.ink/img/avatar.jpg">
+<meta property="article:author" content="weihx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://firefly.rainyun.ink/img/avatar.jpg"><link rel="shortcut icon" href="/img/%E5%B0%8F%E8%8A%B1.png"><link rel="canonical" href="http://firefly.rainyun.ink/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'firefly',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-11-12 18:02:35'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/firefly.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-box-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa-solid fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa-solid fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-solid fa-comments"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-blog"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/bg.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="firefly"><img class="site-icon" src="/img/%E5%B0%8F%E8%8A%B1.png"/><span class="site-name">firefly</span></a></span><div id="menus"></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-box-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa-solid fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa-solid fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-solid fa-comments"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-blog"></i><span> 关于</span></a></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></a></div></div></nav><div id="site-info"><h1 id="site-title">firefly</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/c_scanf/" title="C 库函数 scanf() 介绍">C 库函数 scanf() 介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-12T08:06:27.000Z" title="发表于 2023-11-12 16:06:27">2023-11-12</time></span></div><div class="content">#include &lt;stdio.h&gt;
+
+描述
+C 库函数 scanf(scan formatted) 从标准输入 stdin 读取格式化输入，并在指定的参数中写入结果。
+声明
+int scanf (const char *format, ...);
+参数
+
+空白字符：函数将读取并忽略在下一个非空白字符之前遇到的任何空白字符(空白字符包括空格、换行和制表符[1])。
+非空白字符，格式说明符（%除外）：每个格式字符串中的这种字符处理来自输入流的准确同一字符，或若它与流的下个字符比较不相等则导致函数失败。
+格式说明符：由初始百分号 (%) 形成的序列表示格式说明符，用于指定要从流中检索并存储到附加参数指向的位置的数据的类型和格式。
+附加参数：输入数据的存储位置。为了存储此输入数据，scanf 需要知道变量的内存位置。
+
+scanf 的格式说明符遵循以下原型：%[*][width][length]specifier
+格式说明符
+格式说明符的解释及其相应参数的类型：
+
+
+
+转换指示符
+描述
+
+
+
+
+i
+匹配一个整数
+
+
+d or u
+匹配一个十进制整数，u 匹配无符号十进制整数
+
+
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Web_Design_note_03/" title="网站设计基础-CSS3基础">网站设计基础-CSS3基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-26T01:28:51.000Z" title="发表于 2023-03-26 09:28:51">2023-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">CSS概述
+CSS简介
+
+层叠样式表Cascading Style Sheets)。
+也是一种标记语言。
+主要用于设置HTML页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局和外观显示样式。
+CSS让我们的网页更加丰富多彩，布局更加灵活自如。
+CSS最大价值: 由HTML专注去做结构呈现，样式交给CSS，即结构(HTML)与样式(CSS)相分离。
+
+CSS规则
+CSS规则由两个主要的部分构成：选择器和声明。
+1234567&lt;style type=&quot;text/css&quot;&gt;    P &#123;        font-size: 20px;        color: #00ff00;    &#125;&lt;/style&gt;&lt;!-- &lt;style&gt;一般写到&lt;head&gt;内部。 --&gt;
+CSS书写规范
+CSS书写顺序
+
+位置属性(position, top, right, z-index, display, float等)
+大小(width, height, paddin ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/gcd/" title="最大公约数">最大公约数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-18T01:11:28.000Z" title="发表于 2023-03-18 09:11:28">2023-03-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E8%AE%BA/">数论</a></span></div><div class="content">
+最大公约数即为Greatest Common Divisor，常缩写为gcd。
+
+更相减损术
+描述
+更相减损术是出自《九章算术》的一种求最大公约数的算法，它原本是为约分而设计的，但它适用于任何需要求最大公约数的场合。
+
+可半者半之，不可半者，副置分母、子之数，以少减多，更相减损，求其等也。以等数约之。
+
+定义
+∀a,b∈N,a⩾b⇒gcd⁡(a,b)=gcd⁡(b,a−b)=gcd⁡(a,a−b)\forall a, b \in \mathbb{N}, a \geqslant b \Rightarrow \gcd(a, b) = \gcd(b, a - b) = \gcd(a, a - b)
+∀a,b∈N,a⩾b⇒gcd(a,b)=gcd(b,a−b)=gcd(a,a−b)
+∀a,b∈N⇒gcd(2a,2b)=2⋅gcd⁡(a,b)\forall a, b \in \mathbb{N} \Rightarrow gcd(2a, 2b) = 2 \cdot \gcd(a, b)
+∀a,b∈N⇒gcd(2a,2b)=2⋅gcd(a,b)
+证明
+a∣ba \mid ba∣b 表示 aaa 能 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Web_Design_note_02/" title="网站设计基础-HTML5基础">网站设计基础-HTML5基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-05T13:16:30.000Z" title="发表于 2023-03-05 21:16:30">2023-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">HTML5基本结构
+HTML5（Hyper Text Markup Language 超文本标记语言）实际上不算是一种编程语言，而是一种标记语言。所谓超文本，有 2 层含义：
+
+它可以加入图片、声音、动画、多媒体等内容（超越文本限制 ）。
+它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本 ）。
+
+基本结构是由一系列成对出现的元素标签组合而成，这些标签以&lt; &gt;的形式出现，用于标记文本内容的含义。浏览器通过元素标签解析文本内容并将结果显示在网页上，而元素标签本身并不会被浏览器显示出来。
+123456789&lt;!DOCTYPE html&gt;&lt;html&gt;    &lt;head&gt;        &lt;title&gt;网页标题&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        主体内容    &lt;/body&gt;&lt;/html&gt;
+HTML5元素的内容一般以起始标签&lt;元素名&gt;开始，以结束标签&lt;/元素名&gt;终止。例如首部标签&lt;hea ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Web_Design_note_01/" title="网站设计基础-第一章 绪论">网站设计基础-第一章 绪论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-05T12:56:45.000Z" title="发表于 2023-03-05 20:56:45">2023-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">Web原理基础
+Web架构
+Web架构是由Web服务器与Web浏览器两部分组成的，也可以称为是浏览器/服务器（B/S，Browser/Server）架构，如图所示。
+
+Web服务器
+
+Web服务器是在实体机或虚拟机服务器设备中安装的服务器软件，在联网环境中可以接收用户在Web浏览器中输入的URL（UniformResource Locator，统一资源定位符）地址，然后将该地址对应的文本、图片等内容发送给用户并显示在用户使用的Web浏览器中。
+Web服务器通常用于放置网页文件和数据供用户访问和下载。
+常用的Web服务器有Apache、IIS、Nginx等。
+
+Web浏览器
+
+Web浏览器是安装在客户端（PC端或移动设备）的软件，用于访问和显示Web资源。
+用户打开Web浏览器后输入正确的URL地址就可以访问网络上的资源，Web资源一般会以HTML文件（后缀名为.html或.htm的文件）的形式发送给浏览器。
+浏览器可以解析和运行接收到的HTML文件，使其在浏览器中呈现带有文字、图像、超链接等丰富内容并且具有排版布局效果的画面，即Web页面。
+
+Web应用
+
+Web应用不需要安装，其程序 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/html_note_01/" title="HTML5笔记-01"><img class="post-bg" src="/img/HTML5_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML5笔记-01"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/html_note_01/" title="HTML5笔记-01">HTML5笔记-01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-15T10:35:22.000Z" title="发表于 2023-02-15 18:35:22">2023-02-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">HTML简介导读
+网页
+什么是网页
+网站是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的网页集合。
+网页是网站中的一“页”，通常是HTML格式的文件，它需要通过浏览器来阅读。
+网页是构成网站的基本元素，它通常由图片、链接、文字、声音、视频等元素组成。通常我们看到的网页，常见以.htm或.html后缀结尾的文件，因此将其俗称为HTML文件。
+什么是HTML
+HTML指的是超文本标记语言(Hyper Text Markup Language)，它是用来描述网页的一种语言。
+HTML不是一种编程语言，而是一种标记语言(markup language)。
+标记语言是一套标记标签(markup tag)。
+所谓超文本，有两层含义：
+
+它可以加入图片、声音、动画、多媒体等内容（超越了文本限制）。
+它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本）。
+
+网页的形成
+网页是由网页元素组成的，这些元素是利用html标签描述出来，然后通过浏览器解析来显示给用户的。
+前端人员开发代码 ⟶\longrightarrow⟶ 浏览器显示代码（解析、渲染） ⟶\lo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/STL_binary_search/" title="STL中与二分查找有关函数的用法">STL中与二分查找有关函数的用法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-08T12:14:33.000Z" title="发表于 2023-02-08 20:14:33">2023-02-08</time></span></div><div class="content">
+binary_search()、lower_bound()和upper_bound()函数在头文件&lt;algorithm&gt;中
+
+binary_search()
+1std::binary_search(begin, end, value);
+
+binary_search()函数用于查找指定的元素，找到返回true，否则返回false。
+
+lower_bound()
+1std::lower_bound(begin, end, value);
+
+lower_bound()函数返回数组中大于等于value的第一个元素的地址，若数组中的元素均小于value则返回尾后地址。
+
+
+
+
+int a[]
+lower_bound(a, a + n, 3) - a
+
+
+
+
+[1,2,3,3,3,4]
+2
+
+
+[1,2,2,4]
+3
+
+
+[4,5,6,7,8]
+0
+
+
+[1,1,2,2,2]
+5
+
+
+
+upper_bound()
+1std::upper_bound(begin, end, value);
+
+upper_bound()函数返回数组中大于value的第一个元素的地址，若数组中的元素均小 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/binary_search_problems/" title="二分查找题解">二分查找题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-07T16:29:33.000Z" title="发表于 2023-02-08 00:29:33">2023-02-08</time></span></div><div class="content">力扣704. 二分查找
+题目
+给定一个n个元素有序的（升序）整型数组nums和一个目标值target，写一个函数搜索nums中的target，如果目标值存在返回下标，否则返回-1。
+示例一
+123输入: nums = [-1,0,3,5,9,12], target = 9输出: 4解释: 9 出现在 nums 中并且下标为 4
+示例二
+123输入: nums = [-1,0,3,5,9,12], target = 2输出: -1解释: 2 不存在 nums 中因此返回 -1
+提示：
+
+你可以假设 nums 中的所有元素是不重复的。
+n 将在 [1, 10000]之间。
+nums 的每个元素都将在 [-9999, 9999]之间。
+
+思路
+这道题目的前提是数组为有序数组，同时题目还强调数组中无重复元素，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件。
+写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。
+题解
+123456789101112131415161718class Solu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/binary_search/" title="二分查找">二分查找</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-06T07:47:45.000Z" title="发表于 2023-02-06 15:47:45">2023-02-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">二分查找简介
+二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。
+算法要求
+
+必须采用顺序存储结构
+必须按关键字大小有序排序
+
+时间复杂度
+O(log⁡2n)O(\log_{2}{n})O(log2​n)
+二分查找框架
+123456789101112131415int binarySearch(int[] nums, int target) &#123;    int left = 0, right = ...;    while(...) &#123;        int mid = left + ((right - left) / 2);        if (nums[mid] &gt; target) &#123;            right = ...        &#125; else if (nums[mid] &lt; target) &#123;            left = ...        &#125; else &#123;        ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/js_note_03/" title="JavaScript笔记-03_数据类型"><img class="post-bg" src="/img/JavaScript_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript笔记-03_数据类型"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/js_note_03/" title="JavaScript笔记-03_数据类型">JavaScript笔记-03_数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-03T10:46:33.000Z" title="发表于 2023-02-03 18:46:33">2023-02-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">数据类型简介
+为什么需要数据类型
+在计算机中，不同的数据所需占用的存储空间是不同的，为了便于把数据分成所需内存大小不同的数据，充分利用存储空间，于是定义了不同的数据类型。
+变量的数据类型
+变量是用来存储值得所在处，它们有名字和数据类型。变量的数据类型决定了如何将代表这些值的位存储到计算机的内存中。JavaScript是一种弱类型或者说动态语言。这意味着不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。
+12var num = 10;        // 这是一个数字型var hello = &quot;world&quot;; // 这是一个字符串
+在代码运行时，变量的数据类型是由JS引擎根据 = 右边变量值的数据类型来判断的,运行完毕之后，变量就确定了数据类型。
+JavaScript拥有动态类型，意味着相同的变量可用作不同的类型：
+12var x = 6;       // x为数字var x = &quot;hello&quot;; // x为字符串
+数据类型的分类
+JS把数据类型分为两类：
+
+简单数据类型（Number，String，Boolean，Undefined， ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">weihx</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="mailto:weihx15@gmail.com"><i class="fa-solid fa-envelope"></i><span>Gmail</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">٩(๑∂▽∂๑)۶♡</div></div><div class="sticky_layout"><div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden;"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%;"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/c_scanf/" title="C 库函数 scanf() 介绍">C 库函数 scanf() 介绍</a><time datetime="2023-11-12T08:06:27.000Z" title="发表于 2023-11-12 16:06:27">2023-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/Web_Design_note_03/" title="网站设计基础-CSS3基础">网站设计基础-CSS3基础</a><time datetime="2023-03-26T01:28:51.000Z" title="发表于 2023-03-26 09:28:51">2023-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/gcd/" title="最大公约数">最大公约数</a><time datetime="2023-03-18T01:11:28.000Z" title="发表于 2023-03-18 09:11:28">2023-03-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/Web_Design_note_02/" title="网站设计基础-HTML5基础">网站设计基础-HTML5基础</a><time datetime="2023-03-05T13:16:30.000Z" title="发表于 2023-03-05 21:16:30">2023-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/Web_Design_note_01/" title="网站设计基础-第一章 绪论">网站设计基础-第一章 绪论</a><time datetime="2023-03-05T12:56:45.000Z" title="发表于 2023-03-05 20:56:45">2023-03-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E8%AE%BA/"><span class="card-category-list-name">数论</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/" style="font-size: 1.5em; color: #99a9bf">网站设计基础</a> <a href="/tags/HTML5/" style="font-size: 1.1em; color: #999">HTML5</a> <a href="/tags/scanf/" style="font-size: 1.1em; color: #999">scanf</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 1.1em; color: #999">回忆</a> <a href="/tags/%E6%AF%95%E4%B8%9A/" style="font-size: 1.1em; color: #999">毕业</a> <a href="/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/tags/%E4%B8%89%E5%8D%81%E4%B9%9D%E4%B8%AD/" style="font-size: 1.1em; color: #999">三十九中</a> <a href="/tags/GCD/" style="font-size: 1.1em; color: #999">GCD</a> <a href="/tags/STL/" style="font-size: 1.1em; color: #999">STL</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.5em; color: #99a9bf">二分查找</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C</a> <a href="/tags/%E5%88%9D%E4%B8%AD/" style="font-size: 1.1em; color: #999">初中</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 1.1em; color: #999">题解</a> <a href="/tags/CSS3/" style="font-size: 1.1em; color: #999">CSS3</a> <a href="/tags/JavaScript/" style="font-size: 1.5em; color: #99a9bf">JavaScript</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: #99a1ac">算法</a> <a href="/tags/%E4%B9%9D%E4%B8%80/" style="font-size: 1.1em; color: #999">九一</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-01-28T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">23.6k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-11-12T10:02:35.226Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/end.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 By weihx</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">After all, tomorrow is another day.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(result =>{
+      if (true) {
+        const sub = ["After all, tomorrow is another day."]
+        const content = result.data.content
+        sub.unshift(content)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = result.data.content
+      }
+    })
+  })
+}
+typedJSFn.run(subtitleType)
+</script></div><script data-pjax type="text/javascript" src="https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax type="text/javascript" src="/js/firefly.js"></script><script data-pjax src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
