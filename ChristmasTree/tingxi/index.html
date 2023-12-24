@@ -96,8 +96,31 @@
     }
 
 
-    .text-loading {
-      font-size: 2rem;
+    @media (max-width: 900px) {
+
+      .text-before-loading {
+        font-size: 1.5rem;
+      }
+
+
+      .text-loading {
+        font-size: 1rem;
+        margin: 2px;
+      }
+    }
+
+
+    @media (min-width: 900px) {
+
+      .text-before-loading {
+        font-size: 2rem;
+      }
+
+
+      .text-loading {
+        font-size: 1.5rem;
+        margin: 2px;
+      }
     }
   </style>
 
@@ -236,7 +259,7 @@
 
     function loadAudio() {
       document.getElementById("overlay").innerHTML =
-        '<div class="text-loading">没遇见你之前，我，随遇而安</br>遇见你之后，我，以你为安.....</div>';
+        '<div class="text-before-loading">没遇见你之前，我，随遇而安</br>遇见你之后，我，以你为安.....</div><div class="text-loading">（正在加载音乐，请稍等）</div>';
 
       const file = "https://fleur.eu.org/music/Last-Christmas.mp3";
 
